@@ -34,7 +34,7 @@
                     android:id="@+id/txt_title_sahar"
                     app:fontFamily="sans-serif-condensed-light"
                     android:textSize="24sp" android:textColor="#f0f0f0" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" android:visibility="gone"/>
             <TextView
                     android:text="@string/str_fajr"
                     android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
                     android:layout_height="wrap_content" android:id="@+id/txt_time_sahar"
                     app:fontFamily="sans-serif-condensed-light"
                     android:textSize="24sp" android:textColor="#f0f0f0" app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" android:visibility="gone"/>
             <TextView
                     android:text="@string/str_loading"
                     android:layout_width="wrap_content"
