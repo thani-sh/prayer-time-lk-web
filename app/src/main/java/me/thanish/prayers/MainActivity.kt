@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         if ( data == null ) {
             return null
         }
-        val date = SimpleDateFormat("yyyy-M-dd").format(Date())
+        val date = SimpleDateFormat("yyyy-M-d").format(Date())
         if ( !data!!.has(date)) {
             return null
         }
