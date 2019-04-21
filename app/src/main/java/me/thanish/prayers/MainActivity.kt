@@ -30,7 +30,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateTime() {
-        val times = getTime() ?: return
+        val date = SimpleDateFormat("yyyy-M-d").format(Date())
+        txt_date.text = date
+        val times = getPrayerTimes(date) ?: return
         txt_time_sahar.text = times[0]
         txt_time_fajr.text = times[1]
         txt_time_sunrise.text = times[2]
@@ -40,11 +42,10 @@ class MainActivity : AppCompatActivity() {
         txt_time_isha.text = times[6]
     }
 
-    private fun getTime(): Array<String>? {
+    private fun getPrayerTimes(date: String): Array<String>? {
         if ( data == null ) {
             return null
         }
-        val date = SimpleDateFormat("yyyy-M-d").format(Date())
         if ( !data!!.has(date)) {
             return null
         }
