@@ -2,17 +2,24 @@ package me.thanish.prayers
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.view.GestureDetectorCompat
+import android.view.GestureDetector
+import android.view.MotionEvent
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener {
+    lateinit var gestures: GestureDetectorCompat
+
     var data: JSONObject? = null
+    var time: Date = Date()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        gestures = GestureDetectorCompat(this, this)
         updateData()
         updateTime()
     }
@@ -20,6 +27,37 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         updateTime()
+    }
+
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+        gestures.onTouchEvent(event)
+        return super.onTouchEvent(event)
+    }
+
+    override fun onShowPress(e: MotionEvent?) {
+        time = Date(time.time + 1000 * 60 * 60 * 24)
+        updateTime()
+    }
+
+    override fun onLongPress(e: MotionEvent?) {
+        time = Date()
+        updateTime()
+    }
+
+    override fun onSingleTapUp(e: MotionEvent?): Boolean {
+        return false
+    }
+
+    override fun onDown(e: MotionEvent?): Boolean {
+        return false
+    }
+
+    override fun onScroll(e1: MotionEvent?, e2: MotionEvent?, distanceX: Float, distanceY: Float): Boolean {
+        return false
+    }
+
+    override fun onFling(e1: MotionEvent?, e2: MotionEvent?, velocityX: Float, velocityY: Float): Boolean {
+        return false
     }
 
     private fun updateData() {
@@ -30,7 +68,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateTime() {
-        val date = SimpleDateFormat("yyyy-M-d").format(Date())
+        val date = SimpleDateFormat("yyyy-M-d").format(time)
         txt_date.text = date
         val times = getPrayerTimes(date) ?: return
         txt_time_sahar.text = times[0]
