@@ -35,17 +35,18 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener {
     }
 
     override fun onShowPress(e: MotionEvent?) {
+        // ...
+    }
+
+    override fun onSingleTapUp(e: MotionEvent?): Boolean {
         time = Date(time.time + 1000 * 60 * 60 * 24)
         updateTime()
+        return true
     }
 
     override fun onLongPress(e: MotionEvent?) {
         time = Date()
         updateTime()
-    }
-
-    override fun onSingleTapUp(e: MotionEvent?): Boolean {
-        return false
     }
 
     override fun onDown(e: MotionEvent?): Boolean {
