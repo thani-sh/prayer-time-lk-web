@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity(), GestureDetector.OnGestureListener {
     }
 
     private fun updateTime() {
-        val date = SimpleDateFormat("yyyy-M-d").format(time)
+        val date = SimpleDateFormat("M-d").format(time)
         txt_date.text = date
         val times = getPrayerTimes(date) ?: return
         txt_time_sahar.text = times[0]
