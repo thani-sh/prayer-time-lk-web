@@ -2,9 +2,11 @@
 	import type { PrayerTimes } from '@thani-sh/prayer-time-lk';
 	import { t, f } from '$lib/i18n';
 
-	export let prayers: PrayerTimes;
+	// Prayer times to display in a table
+	export let prayerTimes: PrayerTimes;
 
-	$: entries = Object.entries(prayers).map(([name, { hour, minute }]) => {
+	// Convert the prayer times to an array of objects to use with table rows
+	$: rows = Object.entries(prayerTimes).map(([name, { hour, minute }]) => {
 		return {
 			name: t(name),
 			time: f.time(hour, minute)
@@ -13,7 +15,7 @@
 </script>
 
 <div class="timetable">
-	{#each entries as entry}
+	{#each rows as entry}
 		<div class="row">
 			<div class="col name">{entry.name}</div>
 			<div class="col time">{entry.time}</div>

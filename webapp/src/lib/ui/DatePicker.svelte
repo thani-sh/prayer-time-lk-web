@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { date } from '$lib/store';
 
+	/**
+	 * Convert a Date object to a string in the format YYYY-MM-DD
+	 */
 	function toDateString(input: Date) {
 		const m = '' + (input.getMonth() + 1);
 		const d = '' + input.getDate();
@@ -8,9 +11,11 @@
 		return [y, m.padStart(2, '0'), d.padStart(2, '0')].join('-');
 	}
 
+	// Date string for the input element
 	let dateString = toDateString($date);
 
 	$: {
+		// Update the store when the user selects a date
 		date.set(new Date(dateString));
 	}
 </script>

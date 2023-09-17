@@ -4,12 +4,13 @@
 	import Datepicker from '$lib/ui/DatePicker.svelte';
 	import { forDate } from '@thani-sh/prayer-time-lk';
 
-	$: prayers = forDate($date);
+	// Prayer times for the selected date
+	$: prayerTimes = forDate($date);
 </script>
 
 <div class="content">
 	<h1>Prayer Time</h1>
-	<TimeTable {prayers} />
+	<TimeTable {prayerTimes} />
 </div>
 <div class="overlay">
 	<Datepicker />
