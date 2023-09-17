@@ -15,7 +15,7 @@
 </script>
 
 <div class="content">
-	<h1>Prayer Times</h1>
+	<h1>Prayer Time</h1>
 	{#each entries as entry}
 		<div class="row">
 			<div class="col name">{entry.name}</div>
