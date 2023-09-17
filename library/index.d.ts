@@ -1,8 +1,14 @@
+/**
+ * Prayer time
+ */
 interface Time {
   hour: number;
   minute: number;
 }
 
+/**
+ * Prayer times for a given day
+ */
 interface PrayerTimes {
   fajr: Time;
   sunrise: Time;
@@ -12,6 +18,19 @@ interface PrayerTimes {
   isha: Time;
 }
 
-function forDate(date: Date): PrayerTimes;
+/**
+ * Reutrns prayer times for a given month and day
+ */
+export declare function forMonthAndDay(month: number, day: number): PrayerTimes;
 
-function forToday(): PrayerTimes;
+/**
+ * Reutrns prayer times for a given date
+ */
+export declare function forDate(date: Date): PrayerTimes;
+
+/**
+ * Returns prayer times for today
+ */
+export declare function forToday(): PrayerTimes;
+
+export {};
