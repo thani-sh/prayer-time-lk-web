@@ -1,7 +1,7 @@
 /**
  * Prayer time
  */
-interface Time {
+export interface Time {
   hour: number;
   minute: number;
 }
@@ -9,7 +9,7 @@ interface Time {
 /**
  * Prayer times for a given day
  */
-interface PrayerTimes {
+export interface PrayerTimes {
   fajr: Time;
   sunrise: Time;
   dhuhr: Time;
