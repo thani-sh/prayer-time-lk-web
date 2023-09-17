@@ -14,7 +14,7 @@
 	});
 </script>
 
-<div class="wrapper">
+<div class="content">
 	<h1>Prayer Times</h1>
 	{#each entries as entry}
 		<div class="row">
@@ -25,14 +25,15 @@
 </div>
 
 <style>
-	.wrapper {
-		margin-top: -100px;
+	.content {
 		display: flex;
+		margin-top: -100px;
 		flex-direction: column;
 		font-size: 24px;
+		pointer-events: none;
 	}
 
-	.wrapper h1 {
+	.content h1 {
 		display: block;
 		text-align: center;
 	}

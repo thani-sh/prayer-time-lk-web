@@ -2,4 +2,16 @@
 	import './styles.css';
 </script>
 
-<slot />
+<div class="wrapper">
+	<slot />
+</div>
+
+<style>
+	.wrapper {
+		display: flex;
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+	}
+</style>
