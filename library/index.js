@@ -23,8 +23,9 @@ export function forMonthAndDay(month, day) {
     sunrise: createTime(times[1][0], times[1][1]),
     dhuhr: createTime(times[2][0], times[2][1]),
     asr: createTime(times[3][0], times[3][1]),
-    maghrib: createTime(times[4][0], times[4][1]),
-    isha: createTime(times[5][0], times[5][1]),
+    hanafi_asr: createTime(times[4][0], times[4][1]),
+    maghrib: createTime(times[5][0], times[5][1]),
+    isha: createTime(times[6][0], times[6][1]),
   };
 }
 
