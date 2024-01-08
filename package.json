@@ -1,0 +1,20 @@
+{
+  "name": "monorepo",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "yarn workspaces foreach --all --parallel --interlaced run dev"
+  },
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "devDependencies": {
+    "@yarnpkg/types": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "packageManager": "yarn@4.0.2"
+}
