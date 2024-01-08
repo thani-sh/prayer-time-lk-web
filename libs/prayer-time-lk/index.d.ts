@@ -14,6 +14,7 @@ export interface PrayerTimes {
   sunrise: Time;
   dhuhr: Time;
   asr: Time;
+  asr_hanafi: Time;
   maghrib: Time;
   isha: Time;
 }
