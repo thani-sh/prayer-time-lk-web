@@ -484,10 +484,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@thani-sh/prayer-time-lk@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@thani-sh/prayer-time-lk@npm:1.1.0"
-  checksum: 1fae7783eae9f85fe47ec184fda1710d5583fcabd8944c03ef176c91693dddd90a79b7ecbae949119434b77dbfd4cd17fa65bbcdcd0e8679397b1c42f562d09d
+"@thani-sh/prayer-time-lk@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@thani-sh/prayer-time-lk@npm:1.2.0"
+  checksum: 1dd126c92f09c6e99472f30d53a7cc124484033270e9a0f82066fd09a2518098b17cddc9ed761e6b661313d1a4fd5d221391997900b60e8f4de277137f882826
   languageName: node
   linkType: hard
 
@@ -2651,7 +2651,7 @@ __metadata:
     "@sveltejs/adapter-auto": "npm:^2.0.0"
     "@sveltejs/adapter-cloudflare": "npm:^2.3.3"
     "@sveltejs/kit": "npm:^1.20.4"
-    "@thani-sh/prayer-time-lk": "npm:^1.1.0"
+    "@thani-sh/prayer-time-lk": "npm:^1.2.0"
     "@typescript-eslint/eslint-plugin": "npm:^6.0.0"
     "@typescript-eslint/parser": "npm:^6.0.0"
     eslint: "npm:^8.28.0"

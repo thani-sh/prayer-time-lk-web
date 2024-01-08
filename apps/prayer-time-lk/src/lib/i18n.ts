@@ -4,6 +4,7 @@ const values: { [lang: string]: { [key: string]: string } } = {
 		sunrise: 'Sunrise',
 		dhuhr: 'Dhuhr',
 		asr: 'Asr',
+		asr_hanafi: 'Asr (حَنَفِية)',
 		maghrib: 'Maghrib',
 		isha: 'Isha'
 	}
